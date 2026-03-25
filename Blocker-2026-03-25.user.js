@@ -4,8 +4,8 @@
 // @version      2026-03-25
 // @description  try to take over the world!
 // @author       You
-// @updateURL    https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlocker/main/Blocker-2026-03-25.user.js
-// @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlocker/main/Blocker-2026-03-25.user.js
+// @updateURL    https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker-2026-03-25.user.js
+// @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker-2026-03-25.user.js
 // @match *://grok.com/*
 // @match *://*.grok.com/*
 // @match *://chatgpt.com/*
