@@ -25,5 +25,5 @@
     'use strict';
     setInterval(()=>{
         document.body.innerHTML="Nö";
-    },100);
+    },80);
 })();
