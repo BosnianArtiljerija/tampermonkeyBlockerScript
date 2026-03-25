@@ -1,10 +1,9 @@
 // ==UserScript==
 // @name         Blocker
 // @namespace    http://tampermonkey.net/
-// @version      2026-03-27
+// @version      2026-03-28
 // @description  try to take over the world!
 // @author       You
-// @updateURL    https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker.user.js
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker.user.js
 // @match *://grok.com/*
 // @match *://*.grok.com/*
