@@ -31,18 +31,22 @@
         document.body.innerHTML="Nö";
     },100);
 
-        function block() {
-            if (document.documentElement) {
-                document.documentElement.innerHTML = "Nö";
-            }
+    function block() {
+        if (document.documentElement) {
+            document.documentElement.innerHTML = "Nö";
         }
+    }
 
-        setInterval(block, 100);
+    try {
+        block();
+    } catch (e) {}
 
-        // also catch SPA navigation
-        window._____observer = new MutationObserver(block);
-        window._____observer.observe(document.documentElement, {
-            childList: true,
-            subtree: true
-        });
+    setInterval(block, 100);
+
+    // also catch SPA navigation
+    window._____observer = new MutationObserver(block);
+    window._____observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true
+    });
 })();
