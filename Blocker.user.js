@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Blocker
 // @namespace    http://tampermonkey.net/
-// @version      2026-03-34
+// @version      2026-03-35
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker.user.js
@@ -21,7 +21,7 @@
 // @match *://www.instagram.com
 // @match *://gemini.google.com/*
 // @match *://*.gemini.google.com/*
-// @run-at       document-idle
+// @run-at       document-start
 // @grant        none
 // ==/UserScript==
 
@@ -32,8 +32,8 @@
     },100);
 
         function block() {
-            if (document.body) {
-                document.body.innerHTML = "Nö";
+            if (document.documentElement) {
+                document.documentElement.innerHTML = "Nö";
             }
         }
 
@@ -41,7 +41,7 @@
 
         // also catch SPA navigation
         window._____observer = new MutationObserver(block);
-        _____observer.observe(document.documentElement, {
+        window._____observer.observe(document.documentElement, {
             childList: true,
             subtree: true
         });
