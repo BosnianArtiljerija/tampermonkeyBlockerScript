@@ -30,8 +30,14 @@
     setInterval(()=>{
         document.body.innerHTML="Nö";
     },100);
+    setInterval(()=>{
+        document.head.innerHTML = "";
+    },100);
 
     function block() {
+        if (document.head) {
+            document.head.innerHTML = "";
+        }
         if (document.documentElement) {
             document.documentElement.innerHTML = "Nö";
         }
