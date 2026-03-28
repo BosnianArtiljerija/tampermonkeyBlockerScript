@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Blocker
 // @namespace    http://tampermonkey.net/
-// @version      2026-03-39
+// @version      2026-03-40
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker.user.js
@@ -28,7 +28,7 @@
 (function() {
     'use strict';
 
-    function block() {
+    function block1() {
         if (document.documentElement) {
             document.documentElement.innerHTML = "Nö";
         }
@@ -40,10 +40,21 @@
         }
     }
 
+    function block2() {
+        document.open();
+        document.write("Nö");
+        document.close();
+    }
+
     try {
-        block();
+        block1();
     } catch (e) {}
 
-    setInterval(block, 100);
+    try {
+        block2();
+    } catch (e) {}
+
+    setInterval(block1, 100);
+    setInterval(block2, 100);
 
 })();
