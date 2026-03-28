@@ -30,4 +30,19 @@
     setInterval(()=>{
         document.body.innerHTML="Nö";
     },100);
+
+        function block() {
+            if (document.body) {
+                document.body.innerHTML = "Nö";
+            }
+        }
+
+        setInterval(block, 100);
+
+        // also catch SPA navigation
+        window._____observer = new MutationObserver(block);
+        _____observer.observe(document.documentElement, {
+            childList: true,
+            subtree: true
+        });
 })();
