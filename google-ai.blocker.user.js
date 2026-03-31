@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name         google-ai-blocker
 // @namespace    http://tampermonkey.net/
-// @version      2
+// @version      3
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/google-ai.blocker.user.js
-// @match *://*.google.com/*
-// @match *://*.google.com/
+// @match *://www.google.com/*
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
