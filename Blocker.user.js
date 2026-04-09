@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Blocker
 // @namespace    http://tampermonkey.net/
-// @version      2026-03-40
+// @version      2026-03-41
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker.user.js
@@ -9,6 +9,8 @@
 // @match *://*.grok.com/*
 // @match *://chatgpt.com/*
 // @match *://*.chatgpt.com/*
+// @match *://deviantart.com/*
+// @match *://*.deviantart.com/*
 // @match *://x.ai/*
 // @match *://*.x.ai/*
 // @match *://openai.com/*
