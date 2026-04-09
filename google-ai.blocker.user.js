@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         google-ai-blocker
 // @namespace    http://tampermonkey.net/
-// @version      5
+// @version      6
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/google-ai.blocker.user.js
@@ -18,6 +18,10 @@
     function block1() {
         [...document.querySelectorAll("div[role=listitem]")]
         .filter(x => x.innerText==="Режим ИИ" || x.innerText==="KI‑Modus")
+        .forEach(x => x.hidden=true)
+
+        [...document.querySelectorAll("textarea")]
+        .filter(x => x.innerText==="Задайте вопрос" || x.innerText==="Frage senden")
         .forEach(x => x.hidden=true)
     }
 
