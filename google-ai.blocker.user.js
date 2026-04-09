@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         google-ai-blocker
 // @namespace    http://tampermonkey.net/
-// @version      11
+// @version      12
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/google-ai.blocker.user.js
@@ -15,7 +15,7 @@
 
     console.error("Script was injected");
 
-    const banned = ["Режим ИИ", "KI‑Modus", "Задайте вопрос", "Frage senden"];
+    const banned = ["Режим ИИ", "KI‑Modus", "Задайте вопрос", "Frage senden", "Frage stellen"];
 
     function block1() {
         [...document.querySelectorAll("div")]
