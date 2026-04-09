@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         google-ai-blocker
 // @namespace    http://tampermonkey.net/
-// @version      9
+// @version      10
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/google-ai.blocker.user.js
@@ -20,6 +20,9 @@
     function block1() {
         [...document.querySelectorAll("div")]
             .filter(x => banned.includes(x.innerText))
+            .forEach(x => x.hidden=true);
+        [...document.querySelectorAll("textarea")]
+            .filter(x => banned.includes(x.placeholder))
             .forEach(x => x.hidden=true);
     }
 
