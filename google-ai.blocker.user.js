@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         google-ai-blocker
 // @namespace    http://tampermonkey.net/
-// @version      14
+// @version      15
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/google-ai.blocker.user.js
@@ -26,7 +26,7 @@
             .forEach(x => x.hidden=true);
         [...document.querySelectorAll("img")]
             .filter(x => x?.getAttribute("alt")?.includes("DeviantArt"))
-            .forEach(x => el.style.opacity = "0");
+            .forEach(x => x.style.opacity = "0");
         [...document.querySelectorAll("a")]
             .filter(x => x?.getAttribute("href")?.toLowerCase()?.includes("deviantart"))
             .forEach(x => x.parentElement.parentElement.style.display = "none");
