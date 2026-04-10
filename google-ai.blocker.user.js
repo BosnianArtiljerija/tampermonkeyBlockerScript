@@ -24,6 +24,9 @@
         [...document.querySelectorAll("textarea")]
             .filter(x => banned.includes(x?.getAttribute("placeholder")))
             .forEach(x => x.hidden=true);
+        [...document.querySelectorAll("img")]
+            .filter(x => x?.getAttribute("alt")?.includes("DeviantArt"))
+            .forEach(x => x.hidden=true);
     }
 
 
