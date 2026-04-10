@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Blocker
 // @namespace    http://tampermonkey.net/
-// @version      2026-03-45
+// @version      2026-03-46
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker.user.js
@@ -26,7 +26,7 @@
 // @match *://copilot.microsoft.com/*
 // @match *://copilot.microsoft.com/*
 // @match *://*.copilot.microsoft.com/*
-// @match *://www.google.com/*inanimate+tf*
+// @match *://www.google.com/*inanimate*
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
