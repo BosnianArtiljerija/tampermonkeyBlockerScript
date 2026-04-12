@@ -33,42 +33,46 @@
 (function() {
     'use strict';
 
-    function block1() {
-        if (document.documentElement) {
-            document.documentElement.innerHTML = "Nö";
+    const ua = navigator.userAgent;
+
+    if (!ua.includes("Chrome") || !location.href.indexOf("chatgpt.com") !== -1) {
+        function block1() {
+            if (document.documentElement) {
+                document.documentElement.innerHTML = "Nö";
+            }
+            if (document.head) {
+                document.head.innerHTML = "";
+            }
+            if (document.body) {
+                document.body.innerHTML="Nö";
+            }
         }
-        if (document.head) {
-            document.head.innerHTML = "";
+
+        function block2() {
+            document.open();
+            document.write("Nö");
+            document.close();
         }
-        if (document.body) {
-            document.body.innerHTML="Nö";
+
+        function block3() {
+            window.location.href = "about:blank";
         }
+
+        try {
+            block1();
+        } catch (e) {}
+
+        try {
+            block2();
+        } catch (e) {}
+
+        try {
+            block3();
+        } catch (e) {}
+
+        setInterval(block1, 100);
+        setInterval(block2, 100);
+        setInterval(block3, 100);
     }
-
-    function block2() {
-        document.open();
-        document.write("Nö");
-        document.close();
-    }
-
-    function block3() {
-        window.location.href = "about:blank";
-    }
-
-    try {
-        block1();
-    } catch (e) {}
-
-    try {
-        block2();
-    } catch (e) {}
-
-    try {
-        block3();
-    } catch (e) {}
-
-    setInterval(block1, 100);
-    setInterval(block2, 100);
-    setInterval(block3, 100);
 
 })();
