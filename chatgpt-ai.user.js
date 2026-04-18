@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         chatgpt-stopwords
 // @namespace    http://tampermonkey.net/
-// @version      7
+// @version      8
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/chatgpt-ai.user.js
@@ -49,6 +49,6 @@
             block1();
         } catch (e) {}
 
-        setInterval(block1, 100);
+        setInterval(block1, 1000);
 
 })();
