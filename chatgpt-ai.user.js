@@ -23,7 +23,7 @@
             }
             const sws = [
                 "inanimate", "tf", "transform", "velvet", "dress",
-                 "cord", "leggings", "cami"
+                 "cord", "leggings", "cami", "comic"
              ]
                 .map(sw =>  sw.toLowerCase());
             return sws.find(sw => text.includes(sw));
