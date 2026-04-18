@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         chatgpt-stopwords
 // @namespace    http://tampermonkey.net/
-// @version      12
+// @version      13
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/chatgpt-ai.user.js
@@ -22,7 +22,7 @@
                 return false;
             }
             const sws = [
-                "inanimate", "tf", "transform", "velvet", "dress",
+                "inanimate", " tf", "transform", "velvet", "dress",
                  "cord", "leggings", "cami", "comic", "превращ", "превратил"
              ]
                 .map(sw =>  sw.toLowerCase());
