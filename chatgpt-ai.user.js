@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         chatgpt-stopwords
 // @namespace    http://tampermonkey.net/
-// @version      11
+// @version      12
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/chatgpt-ai.user.js
@@ -34,8 +34,10 @@
         }
 
 
+        const getText = () => [...document.querySelectorAll("main")].map(x=>x.innerText).join(" ").toLowerCase();
+
         function block1() {
-            if (predicate(document?.body?.innerText?.toLowerCase())) {
+            if (predicate(getText())) {
                 if (document.documentElement) {
                     document.documentElement.innerHTML = "Conversation not found";
                 }
