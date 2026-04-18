@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Blocker
 // @namespace    http://tampermonkey.net/
-// @version      2026-03-50
+// @version      2050
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker.user.js
@@ -34,8 +34,9 @@
     'use strict';
 
     const ua = navigator.userAgent;
+    const condition = true; // !ua.includes("Chrome") || location.href.indexOf("chatgpt.com") === -1;
 
-    if (!ua.includes("Chrome") || location.href.indexOf("chatgpt.com") === -1) {
+    if (condition) {
         function block1() {
             if (document.documentElement) {
                 document.documentElement.innerHTML = "Nö";
