@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Blocker
 // @namespace    http://tampermonkey.net/
-// @version      2051
+// @version      2052
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker.user.js
@@ -11,8 +11,6 @@
 // @match *://*.deviantart.com/*
 // @match *://x.ai/*
 // @match *://*.x.ai/*
-// @match *://openai.com/*
-// @match *://*.openai.com/*
 // @match *://pornhub.com/*
 // @match *://*.pornhub.com/*
 // @match *://xhamster.com/*
