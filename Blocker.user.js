@@ -7,8 +7,6 @@
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker.user.js
 // @match *://grok.com/*
 // @match *://*.grok.com/*
-// @match *://chatgpt.com/*
-// @match *://*.chatgpt.com/*
 // @match *://deviantart.com/*
 // @match *://*.deviantart.com/*
 // @match *://x.ai/*
@@ -33,8 +31,7 @@
 (function() {
     'use strict';
 
-    const ua = navigator.userAgent;
-    const condition = true; // !ua.includes("Chrome") || location.href.indexOf("chatgpt.com") === -1;
+    const condition = true; 
 
     if (condition) {
         function block1() {
