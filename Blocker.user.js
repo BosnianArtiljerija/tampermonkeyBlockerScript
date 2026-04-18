@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Blocker
 // @namespace    http://tampermonkey.net/
-// @version      2050
+// @version      2051
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/Blocker.user.js
@@ -31,7 +31,7 @@
 (function() {
     'use strict';
 
-    const condition = true; 
+    const condition = true;
 
     if (condition) {
         function block1() {
