@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         chatgpt-stopwords
 // @namespace    http://tampermonkey.net/
-// @version      17
+// @version      18
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/chatgpt-ai.user.js
@@ -23,7 +23,7 @@
 
 (function() {
     'use strict';
-
+        console.warn("chatgpt custom client injected");
 
         const predicate = (text) =>  {
             if (!text) {
