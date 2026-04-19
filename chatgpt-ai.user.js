@@ -1,16 +1,18 @@
 // ==UserScript==
 // @name         chatgpt-stopwords
 // @namespace    http://tampermonkey.net/
-// @version      15
+// @version      16
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/chatgpt-ai.user.js
+// @exclude     *://*.openai.com/images
+// @exclude     *://openai.com/images
+// @exclude     *://*.chatgpt.com/images
+// @exclude     *://chatgpt.com/images
 // @match *://*.chatgpt.com/*
 // @match *://chatgpt.com/*
 // @match *://openai.com/*
 // @match *://*.openai.com/*
-// @exclude     *://*.openai.com/images
-// @exclude     *://openai.com/images
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
