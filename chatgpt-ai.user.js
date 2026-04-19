@@ -1,18 +1,10 @@
 // ==UserScript==
 // @name         chatgpt-stopwords
 // @namespace    http://tampermonkey.net/
-// @version      18
+// @version      19
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/chatgpt-ai.user.js
-// @exclude     *://*.openai.com/images
-// @exclude     *://openai.com/images
-// @exclude     *://*.chatgpt.com/images
-// @exclude     *://chatgpt.com/images
-// @exclude     *://*.openai.com/images*
-// @exclude     *://openai.com/images*
-// @exclude     *://*.chatgpt.com/images*
-// @exclude     *://chatgpt.com/images*
 // @match *://*.chatgpt.com/*
 // @match *://chatgpt.com/*
 // @match *://openai.com/*
@@ -26,6 +18,10 @@
         console.warn("chatgpt custom client injected");
 
         const predicate = (text) =>  {
+            if (location.href.includes("chatgpt.com/images")) {
+                return false;
+            }
+
             if (!text) {
                 return false;
             }
