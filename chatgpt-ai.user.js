@@ -26,7 +26,7 @@
                 return false;
             }
             const sws = [
-                "inanimate", " tf", "transform", "velvet", "dress", "шелк",
+                "inanimate", " tf", "transform", "velvet", "dress", "шелк", "skirt", "юбка", "платье",
                  "cord", "leggings", "cami", "comic", "превращ", "превратил", "сатин", "вельвет", "кордуро", "кордовы"
              ]
                 .map(sw =>  sw.toLowerCase());
