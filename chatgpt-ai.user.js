@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         chatgpt-stopwords
 // @namespace    http://tampermonkey.net/
-// @version      16
+// @version      17
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/chatgpt-ai.user.js
@@ -9,6 +9,10 @@
 // @exclude     *://openai.com/images
 // @exclude     *://*.chatgpt.com/images
 // @exclude     *://chatgpt.com/images
+// @exclude     *://*.openai.com/images*
+// @exclude     *://openai.com/images*
+// @exclude     *://*.chatgpt.com/images*
+// @exclude     *://chatgpt.com/images*
 // @match *://*.chatgpt.com/*
 // @match *://chatgpt.com/*
 // @match *://openai.com/*
@@ -32,7 +36,7 @@
                 .map(sw =>  sw.toLowerCase());
             return sws.find(sw => {
                 const res = text.includes(sw);
-                if (res) console.error("stop-word found:", sw, text);
+                if (res) console.warn("stop-word found:", sw, text);
                 return res;
             });
         }
