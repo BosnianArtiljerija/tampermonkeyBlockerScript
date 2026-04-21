@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         chatgpt-stopwords
 // @namespace    http://tampermonkey.net/
-// @version      23
+// @version      25
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/chatgpt-ai.user.js
@@ -21,8 +21,8 @@
             const style = document.createElement('style');
             style.id = 'my-style';
             style.textContent = `
-              body {
-                background: red;
+              .group\\/imagegen-image {
+                display: none !important;
               }
             `;
             // inject into document
