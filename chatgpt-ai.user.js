@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         chatgpt-stopwords
 // @namespace    http://tampermonkey.net/
-// @version      22
+// @version      23
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/chatgpt-ai.user.js
@@ -25,11 +25,11 @@
                 background: red;
               }
             `;
+            // inject into document
+            document.head.appendChild(style);
             console.warn("style injected");
         }
 
-        // inject into document
-        document.head.appendChild(style);
 
         const predicate = (text) =>  {
             if (location.href.endsWith("chatgpt.com/") || location.href.endsWith("chatgpt.com")) {
