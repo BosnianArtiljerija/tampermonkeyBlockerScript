@@ -17,6 +17,20 @@
     'use strict';
         console.warn("chatgpt custom client injected");
 
+        const injectStyle = () => {
+            const style = document.createElement('style');
+            style.id = 'my-style';
+            style.textContent = `
+              body {
+                background: red;
+              }
+            `;
+            console.warn("style injected");
+        }
+
+        // inject into document
+        document.head.appendChild(style);
+
         const predicate = (text) =>  {
             if (location.href.endsWith("chatgpt.com/") || location.href.endsWith("chatgpt.com")) {
                 return false;
@@ -44,6 +58,9 @@
         const getText = () => [...document.querySelectorAll("main")].map(x=>x.innerText).join(" ").toLowerCase();
 
         function block1() {
+            if (!document.getElementById('my-style')) {
+                injectStyle();
+            }
             if (predicate(getText())) {
                 if (document.documentElement) {
                     document.documentElement.innerHTML = "Conversation not found";
