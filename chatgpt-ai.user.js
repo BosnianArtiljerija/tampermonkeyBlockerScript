@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         chatgpt-stopwords
 // @namespace    http://tampermonkey.net/
-// @version      25
+// @version      26
 // @description  try to take over the world!
 // @author       You
 // @downloadURL  https://raw.githubusercontent.com/BosnianArtiljerija/tampermonkeyBlockerScript/main/chatgpt-ai.user.js
@@ -32,6 +32,10 @@
 
 
         const predicate = (text) =>  {
+            if (GM_info.isIncognito) {
+                return true;
+            }
+
             if (location.href.endsWith("chatgpt.com/") || location.href.endsWith("chatgpt.com")) {
                 return false;
             }
@@ -44,7 +48,7 @@
             }
             const sws = [
                 "inanimate", " tf", "transform", "velvet", "dress", "шелк", "skirt", "юбка", "платье", "chair", "стул", "кресло", "wearing", "надела", "надевает",
-                 "cord", "leggings", "cami", "comic", "превращ", "превратил", "сатин", "вельвет", "кордуро", "кордовы", "трансформ"
+                 "cord", "leggings", "comic", "превращ", "превратил", "сатин", "вельвет", "кордуро", "кордовы", "трансформ"
              ]
                 .map(sw =>  sw.toLowerCase());
             return sws.find(sw => {
